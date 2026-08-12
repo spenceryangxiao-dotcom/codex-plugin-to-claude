@@ -1,9 +1,19 @@
-# Codex Plugin to Claude
+# Codex Plugin to Claude — Dual-Model AI Code Review for OpenAI Codex
 
 [![Tests](https://github.com/spenceryangxiao-dotcom/codex-plugin-to-claude/actions/workflows/test.yml/badge.svg)](https://github.com/spenceryangxiao-dotcom/codex-plugin-to-claude/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Keep Codex as the primary developer. Bring in Claude as a bounded second opinion only when the work is important enough to justify it.
+**Codex Plugin to Claude** is a free, open-source Codex Skill and Plugin for dual-model development. OpenAI Codex remains the primary AI coding agent for planning, implementation, and testing; Claude Code joins only as a bounded, read-only reviewer for important bugs, security risks, migrations, payments, and production changes.
+
+中文简介：让 Codex 主力开发，让 Claude 在重要问题上做独立互审。普通任务不增加模型调用，重要风险先征求你的许可，明确要求 Claude 时直接复核。
+
+## One-command workflow / 一键开发指令
+
+Copy this into any new Codex task:
+
+```text
+使用 $codex-plugin-to-claude 主力开发这个任务；Codex 负责需求、实现和测试，重要风险或我明确要求时交给 Claude 互审，直到 PASS 或需要我决策。
+```
 
 ## What it does
 

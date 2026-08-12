@@ -19,6 +19,31 @@ class PackageTests(unittest.TestCase):
         )
         self.assertEqual(manifest["interface"]["developerName"], "Spencer Yang")
         self.assertLessEqual(len(manifest["interface"]["defaultPrompt"]), 3)
+        self.assertTrue(
+            {
+                "openai-codex",
+                "claude-code",
+                "ai-code-review",
+                "ai-coding-agent",
+                "dual-model-development",
+            }.issubset(set(manifest["keywords"]))
+        )
+
+    def test_readme_has_search_positioning_and_one_command_prompt(self):
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertTrue(
+            readme.startswith(
+                "# Codex Plugin to Claude — Dual-Model AI Code Review for OpenAI Codex"
+            )
+        )
+        for phrase in (
+            "free, open-source Codex Skill and Plugin",
+            "Claude Code",
+            "dual-model development",
+            "$codex-plugin-to-claude",
+            "重要风险或我明确要求时交给 Claude 互审",
+        ):
+            self.assertIn(phrase, readme)
 
     def test_marketplace_points_to_plugin(self):
         marketplace = json.loads(

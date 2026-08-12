@@ -1,7 +1,7 @@
 {
   "name": "codex-plugin-to-claude",
   "version": "0.1.0",
-  "description": "Keeps Codex in the lead and asks Claude for bounded read-only review on important work.",
+  "description": "Open-source Codex Skill and Plugin for bounded Claude Code review of high-risk development work.",
   "author": {
     "name": "Spencer Yang",
     "url": "https://github.com/spenceryangxiao-dotcom"
@@ -12,15 +12,20 @@
   "keywords": [
     "codex",
     "claude",
+    "openai-codex",
+    "claude-code",
     "code-review",
+    "ai-code-review",
+    "ai-coding-agent",
+    "dual-model-development",
     "risk-review",
     "multi-model"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Plugin to Claude",
-    "shortDescription": "Claude cross-review for high-risk Codex work",
-    "longDescription": "Codex remains the primary developer while Claude independently reviews a bounded sanitized brief. Explicit requests run directly; high-risk work asks for approval first. Reviews return PASS, FAIL, or ASK and never grant Claude repository tools.",
+    "shortDescription": "Claude Code review for high-risk Codex work",
+    "longDescription": "A free open-source Codex Skill and Plugin for dual-model development. OpenAI Codex remains the primary AI coding agent while Claude Code independently reviews a bounded sanitized brief. Explicit requests run directly; high-risk work asks for approval first. Reviews return PASS, FAIL, or ASK and never grant Claude repository tools.",
     "developerName": "Spencer Yang",
     "category": "Developer Tools",
     "capabilities": [
