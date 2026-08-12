@@ -1,0 +1,20 @@
+{
+  "name": "codex-plugin-to-claude",
+  "interface": {
+    "displayName": "Codex Plugin To Claude"
+  },
+  "plugins": [
+    {
+      "name": "codex-plugin-to-claude",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-plugin-to-claude"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer"
+    }
+  ]
+}

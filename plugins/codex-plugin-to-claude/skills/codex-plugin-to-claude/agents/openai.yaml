@@ -1,0 +1,6 @@
+interface:
+  display_name: "Codex Plugin to Claude"
+  short_description: "Claude cross-review for high-risk Codex work"
+  default_prompt: "Use $codex-plugin-to-claude to have Claude cross-review this important change."
+policy:
+  allow_implicit_invocation: true

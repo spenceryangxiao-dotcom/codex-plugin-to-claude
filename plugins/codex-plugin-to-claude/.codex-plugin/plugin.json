@@ -1,0 +1,39 @@
+{
+  "name": "codex-plugin-to-claude",
+  "version": "0.1.0",
+  "description": "Keeps Codex in the lead and asks Claude for bounded read-only review on important work.",
+  "author": {
+    "name": "Spencer Yang",
+    "url": "https://github.com/spenceryangxiao-dotcom"
+  },
+  "homepage": "https://github.com/spenceryangxiao-dotcom/codex-plugin-to-claude#readme",
+  "repository": "https://github.com/spenceryangxiao-dotcom/codex-plugin-to-claude",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "claude",
+    "code-review",
+    "risk-review",
+    "multi-model"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Plugin to Claude",
+    "shortDescription": "Claude cross-review for high-risk Codex work",
+    "longDescription": "Codex remains the primary developer while Claude independently reviews a bounded sanitized brief. Explicit requests run directly; high-risk work asks for approval first. Reviews return PASS, FAIL, or ASK and never grant Claude repository tools.",
+    "developerName": "Spencer Yang",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Structured Review",
+      "Privacy Guardrails",
+      "Risk Detection"
+    ],
+    "websiteURL": "https://github.com/spenceryangxiao-dotcom/codex-plugin-to-claude",
+    "defaultPrompt": [
+      "Use $codex-plugin-to-claude to cross-review this important change.",
+      "Ask Claude to challenge this diagnosis before I implement it.",
+      "Have Claude review this tested fix for material risks."
+    ],
+    "brandColor": "#D97757"
+  }
+}
